@@ -25,6 +25,7 @@ const Hero = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.25, duration: 3 }}
+      className="mt-14"
     >
       <p className="text-lg text-green">Hi, my name is</p>
       <div className="mt-6 space-y-3">
@@ -37,10 +38,8 @@ const Hero = () => {
       </div>
 
       <p className="mt-6 max-w-[500px] text-slate font-semibold">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos
-        esse magni vitae. Dolores facere error pariatur cupiditate aliquam!
-        Quasi aliquam minus enim repellat expedita ipsum placeat deleniti nemo
-        ipsa voluptates?
+        I'm a software developer, not fully yet though only frontend. Currently,
+        focus on learning to become one eventually.
       </p>
 
       <motion.button

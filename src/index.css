@@ -27,10 +27,16 @@
 
 @layer components {
   .container {
-    @apply max-w-6xl lg:mx-auto px-12 md:px-24 py-24;
+    @apply max-w-6xl lg:mx-auto px-12 md:px-24 pt-24 pb-4;
   }
 
   .button {
     @apply border border-green text-green px-4 py-2 rounded-md;
+  }
+}
+
+@layer utilities {
+  .logo {
+    font-family: "Alex Brush", cursive;
   }
 }

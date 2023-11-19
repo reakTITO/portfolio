@@ -17,7 +17,7 @@ const Footer = () => {
             </li>
           ))}
         </ul>
-        <p className="text-sm tracking-widest">Vireak VanKhann</p>
+        <p className="text-sm tracking-widest logo">Vireak VanKhann</p>
       </div>
     </div>
   );

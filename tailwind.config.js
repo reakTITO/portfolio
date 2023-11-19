@@ -19,6 +19,9 @@ export default {
         blue: "#57cbff",
         pink: "#f57dff",
       },
+      fontFamily: {
+        alex: "Alex Brush",
+      },
     },
   },
   plugins: [],

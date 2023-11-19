@@ -40,7 +40,7 @@ const Contact = () => {
           initial="hidden"
           animate="visible"
         >
-          Say Hello
+          <a href="mailto:vireakkvan@gmail.com">Say Hello</a>
         </motion.button>
       </div>
     </div>

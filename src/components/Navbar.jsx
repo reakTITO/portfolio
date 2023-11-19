@@ -35,12 +35,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className="w-full bg-navy py-4 fixed transition-all duration-300 backdrop-blur-lg opacity-90"
+      className="w-full bg-navy py-4 fixed z-20 transition-all duration-300 backdrop-blur-lg opacity-90"
       style={{ top: navbarTop }}
     >
       <div className="flex justify-between items-center px-6 md:px-12 xl:px-16">
         <motion.h2
-          className="uppercase font-bold text-2xl"
+          className="uppercase font-bold text-2xl logo"
           initial={{ y: -200 }}
           animate={{ y: 0 }}
           whileHover={{ color: "#64ffda" }}
