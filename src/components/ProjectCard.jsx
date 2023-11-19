@@ -63,8 +63,8 @@ const ProjectCard = ({ name, img, des, techs, urls }) => {
                 <a
                   href={item.url}
                   className="hover:text-green"
-                  target="_blank"
                   key={item.url}
+                  target="_blank"
                 >
                   <item.icon />
                 </a>
