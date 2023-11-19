@@ -13,10 +13,6 @@ const Hero = () => {
     },
     visible: {
       x: 0,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-      },
     },
   };
 
@@ -49,6 +45,7 @@ const Hero = () => {
         whileHover="hover"
         initial="hidden"
         animate="visible"
+        transition={{ type: "spring", stiffness: 300 }}
       >
         <a href="#projects">Check out my work!</a>
       </motion.button>

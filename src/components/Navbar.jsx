@@ -110,8 +110,10 @@ const Navbar = () => {
         <motion.button
           type="button"
           className="md:hidden text-4xl text-green"
+          initial={{ y: -200 }}
+          animate={{ y: 0 }}
           whileTap={{ rotate: 180 }}
-          transition={{ duration: 0.25 }}
+          transition={{ duration: 0.25, type: "spring", stiffness: 300 }}
           onClick={() => setShowMenu(!showMenu)}
         >
           <RiMenu3Fill />

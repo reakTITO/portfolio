@@ -20,7 +20,7 @@ export const projects = [
   {
     name: "Comfy Shop",
     img: comfy,
-    des: "E-commerce website for buying products",
+    des: "A Functionality E-commerce website with api. Still missing some functions like user, login and signup.",
     techs: ["React", "Tailwind"],
     urls: [
       { url: "https://github.com/reakTITO/Comfy-store", icon: BsGithub },
