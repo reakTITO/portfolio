@@ -20,9 +20,12 @@ export const projects = [
   {
     name: "Comfy Shop",
     img: comfy,
-    des: "A web app for buying staffs",
+    des: "E-commerce website for buying products",
     techs: ["React", "Tailwind"],
-    urls: [{ url: "https://github.com/reakTITO/Comfy-store", icon: BsGithub }],
+    urls: [
+      { url: "https://github.com/reakTITO/Comfy-store", icon: BsGithub },
+      { url: "https://vankhannvireak.vercel.app/", icon: CiShare1 },
+    ],
   },
 ];
 
