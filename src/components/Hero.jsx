@@ -51,7 +51,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        Check out my work!
+        <a href="#projects">Check out my work!</a>
       </motion.button>
     </motion.div>
   );

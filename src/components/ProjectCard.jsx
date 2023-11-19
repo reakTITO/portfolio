@@ -25,13 +25,15 @@ const ProjectCard = ({ name, img, des, techs, urls }) => {
           </div>
           <div className="flex space-x-6">
             {techs.map((tech) => (
-              <p className="text-sm ">{tech}</p>
+              <p className="text-sm " key={tech}>
+                {tech}
+              </p>
             ))}
           </div>
 
           <div className="flex space-x-6 text-2xl">
             {urls.map((item) => (
-              <Link to={item.url} className="hover:text-green">
+              <Link to={item.url} className="hover:text-green" key={item.url}>
                 <item.icon />
               </Link>
             ))}
@@ -50,16 +52,19 @@ const ProjectCard = ({ name, img, des, techs, urls }) => {
             <div className="max-w-[80%]">{des}</div>
             <div className="flex space-x-6">
               {techs.map((tech) => (
-                <p className="text-sm ">{tech}</p>
+                <p className="text-sm " key={tech}>
+                  {tech}
+                </p>
               ))}
             </div>
 
             <div className="flex space-x-6 text-2xl">
               {urls.map((item) => (
                 <a
-                  href={urls[0]?.url}
+                  href={item.url}
                   className="hover:text-green"
                   target="_blank"
+                  key={item.url}
                 >
                   <item.icon />
                 </a>

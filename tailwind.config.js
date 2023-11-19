@@ -9,7 +9,7 @@ export default {
         primGray: "#3B3B3B",
         darkNavy: "#020c1b",
         navy: "#0a192f",
-        lightNavy: "#233554",
+        lightNavy: "#112240",
         darkSlate: "#495670",
         slate: "#8892b0",
         lightSlate: "#a8b2d1",

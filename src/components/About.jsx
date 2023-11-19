@@ -18,7 +18,7 @@ const About = () => {
       </p>
       <div className="mt-6 grid grid-cols-2 space-y-2">
         {technologies.map((technology) => (
-          <p className="flex items-center text-slate">
+          <p className="flex items-center text-slate" key={technology}>
             <span className="text-lg text-green mr-2">
               <MdOutlineArrowRight />{" "}
             </span>

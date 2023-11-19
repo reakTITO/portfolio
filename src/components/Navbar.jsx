@@ -2,6 +2,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../useGlobalContext";
 
 const buttonVariants = {
   hover: {
@@ -15,6 +16,7 @@ const buttonVariants = {
 const Navbar = () => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [navbarTop, setNavbarTop] = useState("0");
+  const { showMenu, setShowMenu } = useGlobalContext();
 
   useEffect(() => {
     const onScroll = () => {
@@ -109,6 +111,8 @@ const Navbar = () => {
           type="button"
           className="md:hidden text-4xl text-green"
           whileTap={{ rotate: 180 }}
+          transition={{ duration: 0.25 }}
+          onClick={() => setShowMenu(!showMenu)}
         >
           <RiMenu3Fill />
         </motion.button>

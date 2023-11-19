@@ -6,5 +6,16 @@ import ProjectCard from "./ProjectCard";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
+import Menu from "./Menu";
 
-export { Navbar, Hero, About, Projects, ProjectCard, Contact, Footer, Sidebar };
+export {
+  Navbar,
+  Hero,
+  About,
+  Projects,
+  ProjectCard,
+  Contact,
+  Footer,
+  Sidebar,
+  Menu,
+};
