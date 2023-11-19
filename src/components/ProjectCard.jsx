@@ -1,28 +1,74 @@
-const ProjectCard = ({ name, img, des }) => {
+import { Link } from "react-router-dom";
+
+const ProjectCard = ({ name, img, des, techs, urls }) => {
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-3">
-      <div className="md:flex">
-        <div className="md:flex-shrink-0">
-          <img
-            className="h-48 w-full object-cover md:w-48"
-            src={img}
-            alt={name}
-          />
-        </div>
-        <div className="p-8">
-          <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-            {name}
-          </div>
-          <a
-            href=""
-            className="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
-          >
-            h9
+    <section>
+      <div className="hidden md:grid grid-cols-3 space-x-4 p-8">
+        <article className="place-self-center col-span-2">
+          <a href={urls[0]?.url} target="_blank">
+            <img
+              src={img}
+              alt={name}
+              className="object-cover w-[300px] lg:w-[500px] xl:w-full h-[200px] lg:h-[300px]"
+            />
           </a>
-          <p className="mt-2 text-gray-500">{des}</p>
-        </div>
+        </article>
+        <article className="flex flex-col items-end z-10 space-y-4">
+          <p className="text-sm text-green">Featured Project</p>
+          <a href={urls[0]?.url} target="_blank">
+            <h2 className="text-3xl font-bold text-lightestSlate hover:text-green">
+              {name}
+            </h2>
+          </a>
+          <div className="w-[400px] hover:shadow-lg transition-all p-6 rounded bg-lightNavy text-light-slate">
+            {des}
+          </div>
+          <div className="flex space-x-6">
+            {techs.map((tech) => (
+              <p className="text-sm ">{tech}</p>
+            ))}
+          </div>
+
+          <div className="flex space-x-6 text-2xl">
+            {urls.map((item) => (
+              <Link to={item.url} className="hover:text-green">
+                <item.icon />
+              </Link>
+            ))}
+          </div>
+        </article>
       </div>
-    </div>
+
+      <a href={urls[0]?.url} className="md:hidden" target="_blank">
+        <div className="relative">
+          <img src={img} alt={name} className="object-cover h-[300px]" />
+          <div className="absolute top-0 left-0 w-full h-full z-10 bg-gray-950 px-9 py-12 opacity-80 hover:shadow-lg flex flex-col space-y-4 text-lightestSlate">
+            <p className="text-sm text-green">Featured Project</p>
+            <a href={urls[0]?.url}>
+              <h2 className="text-3xl font-bold  hover:text-green">{name}</h2>
+            </a>
+            <div className="max-w-[80%]">{des}</div>
+            <div className="flex space-x-6">
+              {techs.map((tech) => (
+                <p className="text-sm ">{tech}</p>
+              ))}
+            </div>
+
+            <div className="flex space-x-6 text-2xl">
+              {urls.map((item) => (
+                <a
+                  href={urls[0]?.url}
+                  className="hover:text-green"
+                  target="_blank"
+                >
+                  <item.icon />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </a>
+    </section>
   );
 };
 

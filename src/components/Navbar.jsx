@@ -64,7 +64,11 @@ const Navbar = () => {
             <motion.li
               initial={{ y: -200 }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.25, type: "spring", stiffness: 300 }}
+              transition={{
+                duration: 0.25,
+                type: "spring",
+                stiffness: 300,
+              }}
             >
               <a
                 href="#projects"
@@ -87,22 +91,27 @@ const Navbar = () => {
             </motion.li>
           </ul>
 
-          <motion.button
-            type="button"
+          <motion.a
+            href="/public/documents/CV.pdf"
             className="button"
             variants={buttonVariants}
             whileHover="hover"
             initial={{ x: 200 }}
             animate={{ x: 0 }}
             transition={{ duration: 0.25, type: "spring", stiffness: 300 }}
+            target="_blank"
           >
             Resume
-          </motion.button>
+          </motion.a>
         </div>
 
-        <button type="button" className="md:hidden text-4xl text-green">
+        <motion.button
+          type="button"
+          className="md:hidden text-4xl text-green"
+          whileTap={{ rotate: 180 }}
+        >
           <RiMenu3Fill />
-        </button>
+        </motion.button>
       </div>
     </nav>
   );

@@ -1,4 +1,5 @@
 import { BsLinkedin, BsInstagram, BsGithub } from "react-icons/bs";
+import { CiShare1 } from "react-icons/ci";
 import { comfy, drink } from "../assets/images";
 
 export const socials = [
@@ -21,6 +22,7 @@ export const projects = [
     img: comfy,
     des: "A web app for buying staffs",
     techs: ["React", "Tailwind"],
+    urls: [{ url: "https://github.com/reakTITO/Comfy-store", icon: BsGithub }],
   },
 ];
 
