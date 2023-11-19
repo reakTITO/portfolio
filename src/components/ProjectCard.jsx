@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const ProjectCard = ({ name, img, des, techs, urls }) => {
   return (
     <section>
-      <div className="hidden md:grid grid-cols-3 space-x-4 p-8">
+      <motion.div
+        className="hidden md:grid grid-cols-3 space-x-4 p-8"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <article className="place-self-center col-span-2">
           <a href={urls[0]?.url} target="_blank">
             <img
@@ -39,9 +45,16 @@ const ProjectCard = ({ name, img, des, techs, urls }) => {
             ))}
           </div>
         </article>
-      </div>
+      </motion.div>
 
-      <a href={urls[0]?.url} className="md:hidden" target="_blank">
+      <motion.a
+        href={urls[0]?.url}
+        className="md:hidden"
+        target="_blank"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <div className="relative">
           <img src={img} alt={name} className="object-cover h-[300px]" />
           <div className="absolute top-0 left-0 w-full h-full z-10 bg-gray-950 px-9 py-12 opacity-90 hover:shadow-lg flex flex-col space-y-4 text-lightestSlate">
@@ -72,7 +85,7 @@ const ProjectCard = ({ name, img, des, techs, urls }) => {
             </div>
           </div>
         </div>
-      </a>
+      </motion.a>
     </section>
   );
 };

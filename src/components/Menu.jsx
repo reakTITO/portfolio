@@ -1,5 +1,5 @@
 import { useGlobalContext } from "../useGlobalContext";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
 
 const Menu = () => {
@@ -14,7 +14,7 @@ const Menu = () => {
     },
   };
   return (
-    <section>
+    <AnimatePresence>
       {showMenu && (
         <div
           className="fixed top-0 w-screen h-screen flex justify-end z-50"
@@ -36,6 +36,7 @@ const Menu = () => {
                 <motion.li
                   initial={{ y: -200 }}
                   animate={{ y: 0 }}
+                  exit={{ y: -200, transition: { duration: 0.1 } }}
                   transition={{
                     duration: 0.25,
                     type: "spring",
@@ -53,6 +54,7 @@ const Menu = () => {
                 <motion.li
                   initial={{ y: -200 }}
                   animate={{ y: 0 }}
+                  exit={{ y: -200, transition: { duration: 0.1 } }}
                   transition={{
                     duration: 0.25,
                     type: "spring",
@@ -70,6 +72,7 @@ const Menu = () => {
                 <motion.li
                   initial={{ y: -200 }}
                   animate={{ y: 0 }}
+                  exit={{ y: -200, transition: { duration: 0.1 } }}
                   transition={{
                     duration: 0.25,
                     type: "spring",
@@ -93,6 +96,7 @@ const Menu = () => {
                 whileHover="hover"
                 initial={{ x: 200 }}
                 animate={{ x: 0 }}
+                exit={{ x: 200, transition: { duration: 0.1 } }}
                 transition={{ duration: 0.25, type: "spring", stiffness: 300 }}
                 target="_blank"
               >
@@ -102,7 +106,7 @@ const Menu = () => {
           </div>
         </div>
       )}
-    </section>
+    </AnimatePresence>
   );
 };
 export default Menu;

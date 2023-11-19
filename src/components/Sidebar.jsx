@@ -4,8 +4,8 @@ import { socials } from "../constants/constants";
 const Sidebar = () => {
   const iconsVariants = {
     hover: {
-      y: -5,
-      transition: { duration: 0.25 },
+      y: -3,
+      transition: { duration: 0.25, type: "spring", stiffness: 300 },
     },
   };
 
