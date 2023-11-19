@@ -40,7 +40,7 @@ const Navbar = () => {
     >
       <div className="flex justify-between items-center px-6 md:px-12 xl:px-16">
         <motion.h2
-          className="uppercase font-bold text-2xl logo"
+          className="capitalize font-bold text-2xl logo tracking-widest"
           initial={{ y: -200 }}
           animate={{ y: 0 }}
           whileHover={{ color: "#64ffda" }}
