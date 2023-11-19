@@ -94,7 +94,7 @@ const Navbar = () => {
           </ul>
 
           <motion.a
-            href="../../public/documents/CV.pdf"
+            href="documents/CV.pdf"
             className="button"
             variants={buttonVariants}
             whileHover="hover"
