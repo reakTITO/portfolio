@@ -24,7 +24,7 @@ export const projects = [
     techs: ["React", "Tailwind"],
     urls: [
       { url: "https://github.com/reakTITO/Comfy-store", icon: BsGithub },
-      { url: "https://vankhannvireak.vercel.app/", icon: CiShare1 },
+      { url: "https://comfystore-alpha.vercel.app", icon: CiShare1 },
     ],
   },
 ];
