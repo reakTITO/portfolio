@@ -58,20 +58,22 @@ const ProjectCard = ({ name, img, des, techs, urls }) => {
         <div className="relative">
           <img src={img} alt={name} className="object-cover h-[300px]" />
           <div className="absolute top-0 left-0 w-full h-full z-10 bg-gray-950 px-9 py-6 opacity-80 hover:shadow-lg flex flex-col space-y-4 text-white">
-            <p className="text-sm text-green">Featured Project</p>
+            <p className="text-xs sm:text-sm text-green">Featured Project</p>
             <a href={urls[0]?.url}>
-              <h2 className="text-3xl font-bold  hover:text-green">{name}</h2>
+              <h2 className="text-lg sm:text-xl font-bold  hover:text-green">
+                {name}
+              </h2>
             </a>
-            <div className="max-w-[90%]">{des}</div>
+            <div className="text-xs sm:text-sm w-full">{des}</div>
             <div className="flex space-x-6">
               {techs.map((tech) => (
-                <p className="text-sm " key={tech}>
+                <p className="text-xs sm:text-sm " key={tech}>
                   {tech}
                 </p>
               ))}
             </div>
 
-            <div className="flex space-x-6 text-2xl">
+            <div className="flex space-x-6 text-xl sm:text-2xl">
               {urls.map((item) => (
                 <a
                   href={item.url}

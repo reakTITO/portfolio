@@ -34,7 +34,7 @@ const Hero = () => {
       </div>
 
       <p className="mt-6 max-w-[500px] text-slate font-semibold">
-        I'm a software developer, not fully yet though only frontend. Currently,
+        I'm a web developer, not fully yet though only frontend. Currently,
         focus on learning to become one eventually.
       </p>
 
