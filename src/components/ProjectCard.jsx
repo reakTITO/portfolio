@@ -48,7 +48,7 @@ const ProjectCard = ({ name, img, des, techs, urls }) => {
       </motion.div>
 
       <motion.a
-        href={urls[0]?.url}
+        href={urls[1]?.url}
         className="md:hidden"
         target="_blank"
         initial={{ opacity: 0 }}
@@ -59,7 +59,7 @@ const ProjectCard = ({ name, img, des, techs, urls }) => {
           <img src={img} alt={name} className="object-cover h-[300px]" />
           <div className="absolute top-0 left-0 w-full h-full z-10 bg-gray-950 px-9 py-6 opacity-80 hover:shadow-lg flex flex-col space-y-4 text-white">
             <p className="text-xs sm:text-sm text-green">Featured Project</p>
-            <a href={urls[0]?.url}>
+            <a href={urls[1]?.url} target="_blank">
               <h2 className="text-lg sm:text-xl font-bold  hover:text-green">
                 {name}
               </h2>
